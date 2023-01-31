@@ -4,23 +4,17 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import {
-  useAuthState,
-  useSignInWithEmailAndPassword,
-} from 'react-firebase-hooks/auth';
-import { Navigate } from 'react-router-dom';
 import auth from '../config/auth';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Navigate } from 'react-router-dom';
 
-export default function SignInPage() {
-  const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
-
-  const [user, loading] = useAuthState(auth);
+export default function SignIn() {
+  const [signInWithEmailAndPassword, user, loading] =
+    useSignInWithEmailAndPassword(auth);
 
   const handleSubmit = useCallback(
     (event: React.FormEvent<HTMLFormElement>) => {
@@ -32,11 +26,11 @@ export default function SignInPage() {
 
       signInWithEmailAndPassword(email, password);
     },
-    []
+    [signInWithEmailAndPassword]
   );
 
   if (user) {
-    return <Navigate to="/dashboard" />;
+    return <Navigate to="/factory" />;
   }
 
   return (
@@ -89,18 +83,6 @@ export default function SignInPage() {
           >
             Se connecter
           </Button>
-          <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link href="#" variant="body2">
-                {"Don't have an account? Sign Up"}
-              </Link>
-            </Grid>
-          </Grid>
         </Box>
       </Box>
     </Container>
