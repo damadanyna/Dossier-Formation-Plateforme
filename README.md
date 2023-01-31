@@ -37,3 +37,7 @@ The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 For more info about deployment, see the section about [deployment](https://vitejs.dev/guide/static-deploy.html) in the documentation
+
+`yarn preview`
+
+Run a static web server based on the build files after a build is run
