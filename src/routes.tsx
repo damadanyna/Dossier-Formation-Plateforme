@@ -2,7 +2,7 @@ import { CircularProgress, Container } from '@mui/material';
 import { FC } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import ProtectedRoute from './components/ProtectedRoute';
+import ProtectedRoute from './components/routing/ProtectedRoute';
 import auth from './config/auth';
 
 import DashboardPage from './pages/admin/Dashboard';
@@ -29,16 +29,9 @@ const AppRoutes: FC = () => {
       <Routes>
         <Route index element={<LandingPage />} />
         <Route path="signin" element={<SignInPage />} />
-        <Route path="factory">
+        <Route path="factory" element={<ProtectedRoute />}>
           <Route index element={<Navigate to="dashboard" />} />
-          <Route
-            path="dashboard"
-            element={
-              <ProtectedRoute>
-                <DashboardPage />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="dashboard" element={<DashboardPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
