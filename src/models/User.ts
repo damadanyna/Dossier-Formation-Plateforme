@@ -1,14 +1,25 @@
-export interface AccessRight {}
+import BaseModel from '../lib/BaseModel';
 
 export type UserRole = 'superadmin' | 'user';
 
-interface UserData {
+export interface UserData {
   _id: string;
+  username: string;
   firstName: string;
   lastName: string;
-  phoneNumber: string;
-  publicPhoneNumber: string;
+  phoneNumber?: string;
+  publicPhoneNumber?: string;
   role: UserRole;
 }
 
-export default UserData;
+export class User extends BaseModel<UserData> {
+  protected static override get _collectionName() {
+    return 'users';
+  }
+
+  get fullName() {
+    return `${this.data.firstName} ${this.data.lastName}`;
+  }
+}
+
+export default User;
