@@ -1,18 +1,17 @@
-import { CircularProgress, Container } from '@mui/material';
 import { FC } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { CircularProgress, Container } from '@mui/material';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import ProtectedRoute from './components/routing/ProtectedRoute';
-import auth from './config/auth';
+import useAuth from './hooks/useAuth';
 
 import DashboardPage from './pages/admin/Dashboard';
 import LandingPage from './pages/Landing';
 import SignInPage from './pages/SignIn';
 
 const AppRoutes: FC = () => {
-  const [user, loadingAuthState] = useAuthState(auth);
+  const { loading } = useAuth();
 
-  return loadingAuthState ? (
+  return loading ? (
     <Container
       sx={{
         display: 'flex',
