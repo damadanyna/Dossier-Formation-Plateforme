@@ -5,6 +5,9 @@ const authContext = createContext<AuthContext>({
   user: null,
   error: null,
   loading: false,
+  signOut: () => Promise.reject('Method not implemented'),
+  signInWithEmailAndPassword: () => Promise.reject('Method not implemented'),
+  signInInProgress: false,
 });
 
 export default authContext;
