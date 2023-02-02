@@ -7,6 +7,8 @@ import useAuth from './hooks/useAuth';
 import DashboardPage from './pages/admin/Dashboard';
 import LandingPage from './pages/Landing';
 import SignInPage from './pages/SignIn';
+import PublicRoute from './components/routing/PublicRoute';
+import AdminLayout from './components/pages/admin/layout/AdminLayout';
 
 const AppRoutes: FC = () => {
   const { loading } = useAuth();
@@ -27,9 +29,27 @@ const AppRoutes: FC = () => {
     <BrowserRouter>
       <Routes>
         <Route index element={<LandingPage />} />
-        <Route path="signin" element={<SignInPage />} />
-        <Route path="factory" element={<ProtectedRoute />}>
-          <Route index element={<Navigate to="dashboard" />} />
+        <Route
+          path="signin"
+          element={
+            <PublicRoute
+              redirectTo={(user) =>
+                user.data.role === 'superadmin' ? '/factory' : '/'
+              }
+            >
+              <SignInPage />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="factory"
+          element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Navigate to="dashboard" replace />} />
           <Route path="dashboard" element={<DashboardPage />} />
         </Route>
       </Routes>

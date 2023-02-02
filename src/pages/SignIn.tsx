@@ -1,20 +1,15 @@
 import React, { useCallback } from 'react';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import auth from '../config/auth';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Navigate } from 'react-router-dom';
+import { LoadingButton } from '@mui/lab';
+import useAuth from '../hooks/useAuth';
 
 export default function SignIn() {
-  const [signInWithEmailAndPassword, user, loading] =
-    useSignInWithEmailAndPassword(auth);
+  const { signInWithEmailAndPassword, signInInProgress } = useAuth();
 
   const handleSubmit = useCallback(
     (event: React.FormEvent<HTMLFormElement>) => {
@@ -28,10 +23,6 @@ export default function SignIn() {
     },
     [signInWithEmailAndPassword]
   );
-
-  if (user) {
-    return <Navigate to="/factory" />;
-  }
 
   return (
     <Container component="main" maxWidth="xs">
@@ -70,19 +61,15 @@ export default function SignIn() {
             id="password"
             autoComplete="current-password"
           />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Se souvenir de moi"
-          />
-          <Button
+          <LoadingButton
             type="submit"
             fullWidth
             variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-            disabled={loading}
+            sx={{ mt: 3, mb: 2, textTransform: 'none', fontWeight: 'bold' }}
+            loading={signInInProgress}
           >
             Se connecter
-          </Button>
+          </LoadingButton>
         </Box>
       </Box>
     </Container>
