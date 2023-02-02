@@ -1,6 +1,12 @@
 import { FC } from 'react';
 import { CircularProgress, Container } from '@mui/material';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Navigate,
+  Outlet,
+  Route,
+  Routes,
+} from 'react-router-dom';
 import ProtectedRoute from './components/routing/ProtectedRoute';
 import useAuth from './hooks/useAuth';
 
@@ -8,7 +14,6 @@ import DashboardPage from './pages/admin/Dashboard';
 import LandingPage from './pages/Landing';
 import SignInPage from './pages/SignIn';
 import PublicRoute from './components/routing/PublicRoute';
-import AdminLayout from './components/pages/admin/layout/AdminLayout';
 
 const AppRoutes: FC = () => {
   const { loading } = useAuth();
@@ -45,7 +50,7 @@ const AppRoutes: FC = () => {
           path="factory"
           element={
             <ProtectedRoute>
-              <AdminLayout />
+              <Outlet />
             </ProtectedRoute>
           }
         >
