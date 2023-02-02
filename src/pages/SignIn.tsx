@@ -25,14 +25,26 @@ export default function SignIn() {
   );
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container
+      component="main"
+      maxWidth="xs"
+      sx={{
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
       <Box
-        sx={{
-          marginTop: 8,
+        sx={(theme) => ({
           display: 'flex',
+          p: 5,
+          borderRadius: 3,
+          boxShadow: theme.shadows[5],
           flexDirection: 'column',
           alignItems: 'center',
-        }}
+        })}
       >
         <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
           <LockOutlinedIcon />
@@ -65,7 +77,13 @@ export default function SignIn() {
             type="submit"
             fullWidth
             variant="contained"
-            sx={{ mt: 3, mb: 2, textTransform: 'none', fontWeight: 'bold' }}
+            sx={{
+              mt: 3,
+              mb: 2,
+              py: 1.5,
+              textTransform: 'none',
+              fontWeight: 'bold',
+            }}
             loading={signInInProgress}
           >
             Se connecter
