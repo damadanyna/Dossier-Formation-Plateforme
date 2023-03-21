@@ -1,5 +1,15 @@
 {
     "titre": "Mon titre",
     "description": "Ceci est ma description",
-    "bouton": "Cliquez ici"
+    "bouton": "Cliquez ici",
+    "nom": "Nom",
+    "placeholder": "Entrer votre Nom",
+    "email": "Email",
+    "placeholderE": "Entrer votre Email",
+    "submitButton": "valider",
+    "passwordLabel": "mot de pass",
+    "passwordPlaceholder": "Mot de passe",
+    "confirmPasswordLabel": "Confirmer mot de passe",
+    "confirmPasswordPlaceholder": "Confirmer mot de pass",
+    "birthDateLabel": "Date"
   }
