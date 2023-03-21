@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 const Landing: FC = () => {
-  return <></>;
+  return <> Salut les gars </>;
 };
 
 export default Landing;
