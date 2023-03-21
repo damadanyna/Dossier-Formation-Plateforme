@@ -8,6 +8,7 @@ import Select from './components/inputs/Select';
 import Checkbox from './components/inputs/Checkbox';
 import textes from './data/textes.json';
 import option from './data/options.json';
+import Footer from './components/Footer';
 
 type Option = {
   value: string;
@@ -48,6 +49,7 @@ const App: React.FC = () => {
   };
 
   return (
+    <div>
     <div className="p-4">
       <form>
         <Input label={textes.nom} value={name} onChange={handleNameChange} placeholder={textes.placeholder} required={true} />
@@ -82,11 +84,13 @@ const App: React.FC = () => {
 
         <Checkbox label="Accepter les conditions d'utilisation" name="conditions" required={true} />
 
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2">
           {textes.submitButton}
         </button>
       </form>
     </div>
+    <Footer/>
+  </div>
   );
 };
 
