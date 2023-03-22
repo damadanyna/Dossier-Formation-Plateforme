@@ -6,6 +6,9 @@ import Boutton from '../components/btn/Boutton';
 
 import TimelineSlide from '../components/timelineSlide';
 import ChiffreCles from '../components/accueil/ChiffreCles';
+import Tarif from '../components/accueil/Tarif';
+
+
 
 
 
@@ -75,6 +78,10 @@ function Home() {
         <div className="flex bg-stone-800 mt-24 pb-10 " >
             <ChiffreCles ></ChiffreCles>
         </div> 
+
+
+        {/* Tarifs */}
+        <Tarif />
 
     </div>
     );
