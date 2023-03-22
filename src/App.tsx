@@ -1,19 +1,25 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import Textarea from './components/inputs/TextArea';
 
-import PublicLayout from './layouts/main';
-import Home from './pages/home';
+function App() {
+  const [description, setDescription] = useState('');
 
-function App (){
+  const handleDescriptionChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setDescription(e.target.value);
+  };
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<PublicLayout />}>
-          <Route index element={<Home />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <Textarea
+        label="Description"
+        value={description}
+        onChange={handleDescriptionChange}
+        placeholder="Entrez une description de votre application"
+        required={true}
+        rows={8}
+      />
+    </div>
   );
 }
-
 
 export default App;
