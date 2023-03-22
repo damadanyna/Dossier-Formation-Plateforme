@@ -5,12 +5,14 @@ type ButtonProps = {
   disabled?: boolean;
   type?: 'primary' | 'secondary' | 'primary-b' | 'secondary-b' | 'border-r' | 'border-r-w' |'secondary-b-sm' |'border-r-sm';
   children: React.ReactNode;
+  className?:string;
 };
 
 const Boutton: FC<ButtonProps> = ({
   onClick,
   type = 'primary',
   children,
+  className = ''
 }) => {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -27,7 +29,7 @@ const Boutton: FC<ButtonProps> = ({
     type === 'border-r-w' ? 'border border-[#9D007B] text-[#9D007B] ' :
     type ==='secondary-b-sm' ? 'bg-[#2B2626]  text-white px-5 py-2 font-[400]  rounded-[5px] w-max':
     type === 'border-r-sm' ? 'border border-[#9D007B] text-[#9D007B] bg-[#EEEEEE] px-5 py-2 font-[400] rounded-[5px] hover:border-[#2B2626] hover:bg-gradient-to-b hover:from-[#FFE2FE] hover:to-[transparent] hover:bg-[transparent] ' :''
-  }`;
+  } ${className}`;
 
   return (
     <button
