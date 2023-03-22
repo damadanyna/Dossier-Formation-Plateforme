@@ -9,3 +9,23 @@ body{
     font-family: 'Golos Text', sans-serif;
 }
 
+
+.rounded_{
+    border-radius:  0px 0px 50px 50px;
+}
+.rounded1_{
+    border-radius:  0px 50px 0px 0px;
+}
+.rounded2_{
+    border-radius:  50px 0px 0px 0px;
+}
+
+.formulaire_w{
+    width: 30rem; 
+}
+.service_txt_{
+    margin-top: -70px;
+}
+.box_shasdow_{
+    box-shadow: 0px 14px 14px rgb(119, 28, 175);
+}

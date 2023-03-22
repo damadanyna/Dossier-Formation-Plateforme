@@ -41,9 +41,9 @@ function TimelineSlide(props: { elts: any;  }){
             </div>
 
             {/* Les 2 boutons sliders */}
-            <div className='flex mb-2'>
-                <button className='rounded-lg text-xs border  p-1' onClick={prev}> prev </button>
-                <button className='rounded-lg text-xs border ml-2 p-1' onClick={next} > next </button>
+            <div className='flex mb-2 '>
+                <button className='bg-stone-200 py-2 px-3 rounded-xl text-xs border  p-1' onClick={prev}>{'<'} </button>
+                <button className='bg-stone-200 py-2 px-3 rounded-xl text-xs border ml-2 p-1' onClick={next} > {'>'} </button>
             </div>
         </div>
     );

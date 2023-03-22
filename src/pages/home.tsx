@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import logo_svg from '../assets/logo.svg';
+import group_1 from '../assets/group1.svg';
+import group from '../assets/group.svg';
 
 import TimelineSlide from '../components/timelineSlide';
+import ChiffreCles from '../components/accueil/ChiffreCles';
 
 
 
@@ -38,11 +41,39 @@ function Home() {
                 <button className=' p-2 px-5 border rounded-lg'> A PROPOS </button> 
             </div>
 
+
         </div>
 
         {/* Composants slider */}
         <TimelineSlide elts={slide_elt} />
+         
+        {/* Greel ico */}
+        <div className=' w-full items-center flex justify-center  mt-10'>
+            <img className=' relative -mr-14 mt-12' src={group} alt="" />
+            <img className=' relative' src={group_1} alt="" />
+        </div>
+
+         {/* Service */}
+        <div className=" font-extrabold flex flex-col mt-16 items-center">
+                <span className=' text-3xl'> Services</span>
+                <span className=' relative text-7xl service_txt_ opacity-10'> Services</span>
+         </div>
         
+        
+         {/* Texte de bievenue */}
+         <div className="flex justify-center">
+            <div className='text-center w-3/5 text-gray-600 text-lg mt-5'>
+                <p>
+                Nous proposons une large gamme de formations pour répondre aux besoins spécifiques de nos clients. Que vous soyez une entreprise ou un particulier, nous avons des formations adaptées à votre profil et à vos objectifs. Nous proposons des formations en ligne, en présentiel ou en blended learning, ainsi que des formations sur mesure pour répondre à vos besoins spécifiques. Nos formateurs expérimentés vous accompagnent tout au long de votre parcours pour vous aider à atteindre vos objectifs.
+                </p>
+            </div>
+         </div>
+
+         {/* chiffre cles */}
+        <div className="flex bg-stone-800 mt-24 pb-10 " >
+            <ChiffreCles ></ChiffreCles>
+        </div> 
+
     </div>
     );
   }
