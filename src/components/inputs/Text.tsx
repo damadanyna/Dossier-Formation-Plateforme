@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface InputProps {
+interface TextProps {
   label: string;
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -8,7 +8,7 @@ interface InputProps {
   required?: boolean;
 }
 
-const Input: React.FC<InputProps> = ({ label, value, onChange, placeholder, required }) => {
+const Text: React.FC<TextProps> = ({ label, value, onChange, placeholder, required }) => {
   return (
     <div className="flex flex-col">
       <label className="mb-1">{label}</label>
@@ -24,4 +24,4 @@ const Input: React.FC<InputProps> = ({ label, value, onChange, placeholder, requ
   );
 };
 
-export default Input;
+export default Text;

@@ -5,15 +5,15 @@ const Header=()=>{
     const items_=[
         {
             label:'Service',
-            url:'/#service'
+            url:'#service'
         },
         {
             label:'Tarif',
-            url:'/#tarif'
+            url:'#tarif'
         },
         {
             label:'Chiffre Cle',
-            url:'/#chiffreCle'
+            url:'#chiffreCle'
         },
         {
             label:'Contact',

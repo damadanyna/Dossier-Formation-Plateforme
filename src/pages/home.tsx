@@ -1,10 +1,14 @@
-import { useState } from 'react';
 import logo_svg from '../assets/logo.svg';
 import group_1 from '../assets/group1.svg';
 import group from '../assets/group.svg';
 
+import Boutton from '../components/btn/Boutton';
+
 import TimelineSlide from '../components/timelineSlide';
 import ChiffreCles from '../components/accueil/ChiffreCles';
+import Tarif from '../components/accueil/Tarif';
+
+
 
 
 
@@ -37,8 +41,9 @@ function Home() {
 
             {/* Les deux boutons */}
             <div className='mt-5 flex justify-center items-center'>
-                <button className='mr-5 p-2 px-5 rounded-lg bg-black text-white border-0'> COMMENCER </button> 
-                <button className=' p-2 px-5 border rounded-lg'> A PROPOS </button> 
+                <Boutton> COMMENCER </Boutton>
+                {/* <button className=' p-2 px-5 border rounded-lg'> A PROPOS </button>  */}
+                <Boutton type='secondary' className='ml-2'>  APROPOS </Boutton>
             </div>
 
 
@@ -48,7 +53,7 @@ function Home() {
         <TimelineSlide elts={slide_elt} />
          
          {/* Service */}
-       <div className="flex flex-col h-screen "> 
+       <div id="service" className="flex flex-col h-screen "> 
             <div className=' w-full items-center flex justify-center  mt-10'>
                 <img className=' relative -mr-14 mt-12' src={group} alt="" />
                 <img className=' relative' src={group_1} alt="" />
@@ -69,10 +74,17 @@ function Home() {
        </div>
        
        {/* chiffre cles */}
-        <div className="flex bg-stone-800 h-screen mt-24 pb-10 " >
+        <div id="chiffreCle" className="flex bg-stone-800 h-screen mt-24 pb-10 " >
             <ChiffreCles ></ChiffreCles>
         </div> 
 
+
+        {/* Tarifs */}
+        <div id='tarif'>
+            <Tarif />
+
+        </div>
+        
     </div>
     );
   }
