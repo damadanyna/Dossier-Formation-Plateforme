@@ -1,4 +1,5 @@
 
+import UserTest from './components/UserTest/UserTest';
 import TestAffiche from './components/btn/TestAffiche';
 import textes from './data/textes.json';
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <h1 className="text-3xl font-bold underline"> Mety ilay izy </h1>
     <div className=''>
       <TestAffiche/>
+      <UserTest/>
     </div>
 
   </div>
