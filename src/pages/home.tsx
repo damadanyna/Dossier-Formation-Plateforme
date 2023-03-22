@@ -1,7 +1,8 @@
-import { useState } from 'react';
 import logo_svg from '../assets/logo.svg';
 import group_1 from '../assets/group1.svg';
 import group from '../assets/group.svg';
+
+import Boutton from '../components/btn/Boutton';
 
 import TimelineSlide from '../components/timelineSlide';
 import ChiffreCles from '../components/accueil/ChiffreCles';
@@ -37,8 +38,9 @@ function Home() {
 
             {/* Les deux boutons */}
             <div className='mt-5 flex justify-center items-center'>
-                <button className='mr-5 p-2 px-5 rounded-lg bg-black text-white border-0'> COMMENCER </button> 
-                <button className=' p-2 px-5 border rounded-lg'> A PROPOS </button> 
+                <Boutton> COMMENCER </Boutton>
+                {/* <button className=' p-2 px-5 border rounded-lg'> A PROPOS </button>  */}
+                <Boutton type='secondary' className='ml-2'>  APROPOS </Boutton>
             </div>
 
 
