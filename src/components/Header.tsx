@@ -1,22 +1,23 @@
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.svg'
 
 const Header=()=>{
     const items_=[
         {
             label:'Service',
-            url:'/'
+            url:'/#service'
         },
         {
             label:'Tarif',
-            url:'/tarif'
+            url:'/#tarif'
         },
         {
             label:'Chiffre Cle',
-            url:'/chiffre_cle'
+            url:'/#chiffreCle'
         },
         {
-            label:'Contacte',
-            url:'/contacte'
+            label:'Contact',
+            url:'/contact'
         }
     ]
     return(
@@ -35,7 +36,7 @@ const Header=()=>{
                 <div className="flex flex-row font-semibold text-sm">
                     {items_.map((item,index)=>(
                         <div key={index}>
-                            <span className=" mx-7">{item.label}</span>
+                            <Link to={item.url} className=" mx-7">{item.label}</Link>
                         </div>
                     ))
 
