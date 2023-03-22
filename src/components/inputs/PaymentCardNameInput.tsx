@@ -1,6 +1,7 @@
 import React from 'react';
 import visa  from '../../assets/visa.svg';
-// import { ReactComponent as MastercardIcon } from '../assets/mastercard.svg';
+import master from '../assets/master.svg';
+import bitcoin from '../assets/bitcoin.svg';
 // import { ReactComponent as AmericanExpressIcon } from '../assets/american-express.svg';
 
 interface InputProps {
@@ -28,8 +29,8 @@ const PaymentCardNameInput: React.FC<InputProps> = ({ label, name, placeholder, 
         />
         <div className="absolute right-0 bottom-0 mb-2 mr-2 flex justify-center">
             <img src={visa} alt="logo" className="h-6 w-6 ml-2"/>
-            <img src={visa} alt="logo" className="h-6 w-6 ml-2"/>
-            <img src={visa} alt="logo" className="h-6 w-6 ml-2"/>
+            <img src={master} alt="logo" className="h-6 w-6 ml-2"/>
+            <img src={bitcoin} alt="logo" className="h-6 w-6 ml-2"/>
             <img src={visa} alt="logo" className="h-6 w-6 ml-2"/>
         </div>
       </div>
