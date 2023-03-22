@@ -12,14 +12,18 @@ function TimelineSlide(props: { elts: Array<EltSlide>; eltShow?:number  }){
     const taille_elt_slide = 200;
     const [index_translate,setIndexTranslate] = useState(0);
     const slide_elt = props.elts;
-    const nbEltShow = (props.eltShow)?props.eltShow:(props.elts.length > 4 ? 4:3);
+    // let nbEltShow = (props.eltShow)?props.eltShow:(props.elts.length > 4 ? 4:3);
+
+    const [nbShow,setNbShow] = useState((props.eltShow)?props.eltShow:(props.elts.length > 4 ? 4:3));
+
+    
 
     return (
         <div className='flex justify-center items-center flex-col mt-5'>
             {/* Elt slider */}
-            <div style={{maxWidth: `${nbEltShow * taille_elt_slide}px` }} className='overflow-hidden flex mb-5 relative'>
+            <div style={{maxWidth: `${nbShow * taille_elt_slide}px` }} className='overflow-hidden flex mb-5 relative'>
 
-                <span style={{width: `${nbEltShow * taille_elt_slide}px` }} className='flex absolute top-5 h-px border-dashed border border-1 border-gray-600'></span>
+                <span style={{width: `${nbShow * taille_elt_slide}px` }} className='flex absolute top-5 h-px border-dashed border border-1 border-gray-600'></span>
 
                 <div className='flex duration-300' style={{transform:`translateX(${index_translate * taille_elt_slide}px)`}}>
                     {slide_elt.map((elt) => <div key={elt.title} className=' rounded flex flex-col' style={{width:`${taille_elt_slide}px`,height:`${taille_elt_slide + 50}px`}} >
@@ -66,6 +70,8 @@ function TimelineSlide(props: { elts: Array<EltSlide>; eltShow?:number  }){
         if(index_translate>= 1) return;
         setIndexTranslate(index_translate + 1);
     }
+
+    
 }
 
 export default TimelineSlide;
