@@ -22,7 +22,7 @@ const Boutton: FC<ButtonProps> = ({
   };
 
 /*asiana div className='w-max' rehef ts ampitombiana le width sinon className='w-[x]' le x variable  */
-  const classNames = `btn px-6 py-3 rounded-lg w-[100%] font-[700] min-w-[130px] ${
+  const classNames = `btn px-6 py-3 rounded-lg  font-[700] min-w-[130px] ${
     type === 'primary' ? 'bg-[#9D007B]  text-white ' : type === 'secondary' ? 'border border-black' : 
     type === 'primary-b' ? 'bg-black  text-white  ' : type ==='secondary-b' ? 'bg-[#2B2626]  text-white  ':
     type === 'border-r' ? 'border border-[#9D007B] text-[#9D007B] bg-[#EEEEEE]' :

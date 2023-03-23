@@ -40,7 +40,7 @@ function Home() {
             {/* Les deux boutons */}
             <div className='flex justify-center items-center mt-12'>
 
-                <Boutton> COMMENCER </Boutton>
+                <Boutton > COMMENCER</Boutton>
                 {/* <button className=' p-2 px-5 border rounded-lg'> A PROPOS </button>  */}
                 <Boutton type='secondary' className='ml-2'>  APROPOS </Boutton>
             </div>
