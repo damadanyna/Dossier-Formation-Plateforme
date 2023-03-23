@@ -10,7 +10,7 @@ function App() {
         <div className=' flex '> 
         <Outlet />
         </div>
-        <div className=' overflow-hidden z-50 fixed bottom-0 w-full flex'>
+        <div className=' overflow-hidden z-40 fixed bottom-0 w-full flex'>
             <Footer></Footer>
         </div>
 

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/logo.svg';
-import MentionLegal from './footer/popup';
-
+import logo from '../assets/logo.svg'; 
 
 const Footer: React.FC = () => {
   const [popup_shown,setPopup] =useState(false) 
@@ -13,7 +11,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-<footer className=' flex w-full h-full'  >
+<footer className=' flex w-full z-10 h-full'  >
     <div className=" fixed z-10 top-0 left-0" > 
         { popup_shown && 
         
