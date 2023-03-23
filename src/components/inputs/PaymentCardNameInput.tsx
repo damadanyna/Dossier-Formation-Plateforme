@@ -1,7 +1,7 @@
 import React from 'react';
 import visa  from '../../assets/visa.svg';
-import master from '../assets/master.svg';
-import bitcoin from '../assets/bitcoin.svg';
+import master from '../../assets/master.svg';
+import bitcoin from '../../assets/bitcoin.svg';
 // import { ReactComponent as AmericanExpressIcon } from '../assets/american-express.svg';
 
 interface InputProps {
