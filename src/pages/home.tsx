@@ -75,7 +75,7 @@ function Home() {
        
        {/* chiffre cles */}
         <div id="chiffreCle" className="flex bg-stone-900    mt-24 pb-10 " >
-            <img className=' z-50 w-full h-full absolute' src={dot} alt="" />
+            <img className=' z-20 w-full h-full absolute' src={dot} alt="" />
             <ChiffreCles ></ChiffreCles>
         </div> 
 
