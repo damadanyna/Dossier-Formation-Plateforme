@@ -7,7 +7,7 @@ import Button from '../components/btn/Boutton';
 
 const Footer: React.FC = () => {
     return (
-        <div className=' h-screen  flex flex-row pt-11 over '>
+        <div className=' h-screen  flex flex-row pt-11 '>
             <div className=" flex flex-col absolute left-20 items-center">
                 <div className=" z-10 flex  flex-col  border-2 px-5 py-6 rounded-lg  border-black"> 
                     <div className="flex flex-row justify-center">
