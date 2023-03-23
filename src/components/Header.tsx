@@ -9,7 +9,7 @@ const Header=()=>{
         },
         {
             label:'Tarif',
-            url:'/#tarif'
+            url:'/tarif'
         },
         {
             label:'Chiffre Cle',
