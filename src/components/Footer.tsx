@@ -2,17 +2,21 @@ import React, { useState } from 'react';
 import logo from '../assets/logo.svg'; 
 
 const Footer: React.FC = () => {
-  const [popup_shown,setPopup] =useState(false) 
+  const [popup_shown,setPopup] =useState(false);
+
   const showPopup=(event:React.MouseEvent<HTMLButtonElement>)=>{ 
-    setPopup(true)
+    setPopup(true);
   };
   const hidePopup=(event:React.MouseEvent<HTMLButtonElement>)=>{ 
-    setPopup(false)
+    setPopup(false);
+
+    console.log(event);
+    
   };
 
   return (
 <footer className=' flex w-full z-10 h-full'  >
-    <div className=" fixed z-10 top-0 left-0" > 
+    <div className="fixed z-10 top-0 left-0" > 
         { popup_shown && 
         
           
@@ -36,7 +40,7 @@ const Footer: React.FC = () => {
         
         }
       </div>
-  <div className="  bg-gray-100 z-30 text-xs py-2 px-12 flex flex-col md:flex-row items-center justify-between  mt-auto w-full">
+  <div className=" bg-gray-100 z-30 text-xs py-2 px-12 flex flex-col md:flex-row items-center justify-between  mt-auto w-full">
     <div className="flex items-center">
         <img className=' w-7' src={logo} alt="" />
         <span className="ml-2 font-bold text-lg text-gray-700">Dossier Formation</span>
@@ -53,11 +57,6 @@ const Footer: React.FC = () => {
       </div> 
 
   </div>
-  
- 
-   
-    
-  
 </footer>
 
 

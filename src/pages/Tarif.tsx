@@ -50,7 +50,7 @@ const tarifs = {
 const euro = '€';
 
 function Tarif(){
-    return (<div className=" py-10 transform scale-90 flex flex-wrap justify-center items-center">
+    return (<div className=" py-10 transform scale-90 flex flex-wrap justify-center items-center w-full">
 
         {/* Pour le bloc base */}
         <div className=" transform scale-90 border-2 shadow-lg flex flex-col pt-10 mb-5 rounded-lg bg-white" style={{width:`${tarifs['base'].width}px`}}>

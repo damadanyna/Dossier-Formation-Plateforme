@@ -5,23 +5,27 @@ const Header=()=>{
     const items_=[
         {
             label:'Service',
-            url:'/#service'
+            url:'/#service',
+            isAncre:true
         },
         {
             label:'Tarif',
-            url:'/tarif'
+            url:'/tarif',
+            isAncre:false
         },
         {
             label:'Chiffre Cle',
-            url:'/#chiffreCle'
+            url:'/#chiffreCle',
+            isAncre:true
         },
         {
             label:'Contact',
-            url:'/contact'
+            url:'/contact',
+            isAncre:false
         }
     ];
     return(
-        <div className=" text-white w-full flex flex-row  bg-white justify-center ">
+        <div className=" text-white w-full flex flex-row  bg-white justify-center sticky top-0">
             <div className="flex bg-black" >
                 <div className=" bg-white w-7 rounded1_"></div>
             </div>
@@ -36,7 +40,9 @@ const Header=()=>{
                 <div className="flex flex-row font-semibold text-sm">
                     {items_.map((item,index)=>(
                         <div key={index}>
-                            <Link to={item.url} className=" mx-7">{item.label}</Link>
+                            {item.isAncre && <a href={item.url}>{item.label}</a> }
+                            {!item.isAncre && <Link to={item.url} className=" mx-7">{item.label}</Link> }
+                            
                         </div>
                     ))
 
