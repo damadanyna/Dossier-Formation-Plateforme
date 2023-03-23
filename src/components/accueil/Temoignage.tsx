@@ -23,7 +23,7 @@ const Service:FC=()=>{
                 </div>
 
                 <div className=" w-full flex justify-center"> 
-                    <div className="mr-14  flex flex-col w-1/3 border py-5 border-stone-700  px-5 " >
+                    <div className="mr-14  flex flex-col w-1/3 border py-5 border-stone-700 rounded-xl  px-5 " >
                         <div className="flex w-full justify-center">
                             <img className=' w-14' src={cot} alt="" />
                         </div>
@@ -43,7 +43,7 @@ const Service:FC=()=>{
                         <span className=' font-bold'>John Doe</span>
                         </div>
                     </div>  
-                    <div className="mr-14  flex flex-col w-1/3 border py-5 border-stone-700  px-5 " >
+                    <div className="mr-14  flex flex-col w-1/3 border py-5 border-stone-700 rounded-xl  px-5 " >
                         <div className="flex w-full justify-center">
                             <img className=' w-14' src={cot} alt="" />
                         </div>
