@@ -5,6 +5,7 @@
 
 import valid_icon from '../../assets/valid-icon.svg';
 import clear_icon from '../../assets/clear-icon.svg';
+import { Link } from 'react-router-dom';
 
 const tarifs = {
     'base':{
@@ -109,7 +110,7 @@ function Tarif(){
             </div>
             {/* Boutons de souscription */}
             <div className="p-5 px-10 flex justify-center items-center">
-                <button className="w-full p-4 font-bold text-white rounded-lg bg-black shadow-2xl shadow-purple-500">SOUSCRIRE</button>
+                <Link to={'/formulairePaiement'} className="w-full text-center p-4 font-bold text-white rounded-lg bg-black shadow-2xl shadow-purple-500" >SOUSCRIRE</Link>
             </div>
         </div>
 
