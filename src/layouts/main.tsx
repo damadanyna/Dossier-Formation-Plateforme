@@ -4,11 +4,11 @@ import Footer from '../components/Footer';
 function App() {
     return (
     <div>
-        <div className=' flex items-center justify-center'>
+        <div className='  w-full flex items-center justify-center'>
             <Header></Header>
         </div>
         <Outlet />
-        <div className=' flex'>
+        <div className=' overflow-hidden z-50 fixed bottom-0 w-full flex'>
             <Footer></Footer>
         </div>
 

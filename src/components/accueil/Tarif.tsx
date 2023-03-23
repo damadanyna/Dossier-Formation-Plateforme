@@ -53,7 +53,7 @@ function Tarif(){
     return (<div className="py-10 flex flex-wrap justify-center items-center">
 
         {/* Pour le bloc base */}
-        <div className="border-2 shadow-lg flex flex-col pt-10 mb-5 rounded-lg bg-white" style={{width:`${tarifs['base'].width}px`}}>
+        <div className=" transform scale-90 border-2 shadow-lg flex flex-col pt-10 mb-5 rounded-lg bg-white" style={{width:`${tarifs['base'].width}px`}}>
             {/* Forfait */}
             <div className="flex flex-col text-center mb-5">
                 <span className="font-bold"> Forfait </span>
@@ -84,7 +84,7 @@ function Tarif(){
         </div>
 
         {/* Pour le bloc premium */}
-        <div className="premium-card border-2 mb-5 shadow-lg border-gray-600 bg-white flex flex-col pt-10 rounded-lg mx-5 bg-gradient-to-tr from-purple-200 via-transparent to-transparent" style={{width:`${tarifs['premium'].width}px`}}>
+        <div className=" transform scale-90 premium-card border-2 mb-5 shadow-lg border-gray-600 bg-white flex flex-col pt-10 rounded-lg mx-5 bg-gradient-to-tr from-purple-200 via-transparent to-transparent" style={{width:`${tarifs['premium'].width}px`}}>
             {/* Forfait */}
             <div className="flex flex-col text-center mb-5">
                 <span className="font-bold"> Forfait </span>
@@ -115,7 +115,7 @@ function Tarif(){
         </div>
 
         {/* pour le bloc standard */}
-        <div className="border-2 shadow-lg flex mb-5 flex-col pt-10 rounded-lg bg-white" style={{width:`${tarifs['standard'].width}px`}}>
+        <div className=" transform scale-90 border-2 shadow-lg flex mb-5 flex-col pt-10 rounded-lg bg-white" style={{width:`${tarifs['standard'].width}px`}}>
             {/* Forfait */}
             <div className="flex flex-col text-center mb-5">
                 <span className="font-bold"> Forfait </span>

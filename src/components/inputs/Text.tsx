@@ -3,7 +3,7 @@ import React from 'react';
 interface TextProps {
   label: string;
   value: string;
-  style_: Object;
+  style_: object;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   required?: boolean;

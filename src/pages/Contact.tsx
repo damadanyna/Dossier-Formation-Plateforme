@@ -17,18 +17,24 @@ const Footer: React.FC = () => {
                         <span className=' border-b w-24 border-black'></span>
                     </div>
                     <div className="flex flex-row "> 
-                            <Text label={'Nom'} required={true} placeholder={'[champ pour le nom]'}></Text>   
+                            <Text label={'Nom'} required={true} placeholder={'[champ pour le nom]'} value={''} style_={{}} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+                            throw new Error('Function not implemented.');
+                        } }></Text>   
                             <div className=' ml-2'> 
-                                <Email  label={' Email'} placeholder={'[champ pour le mail]'} ></Email> 
+                                <Email  label={' Email'} placeholder={'[champ pour le mail]'} value={''} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+                                throw new Error('Function not implemented.');
+                            } } ></Email> 
                             </div>
                     </div> 
                     <div className="flex flex-col mt-4">
                         <span className=' font-medium ml-3'>Objet de votre demande </span>
-                        <Text placeholder="[champ pour l'Objet de votre demande]"></Text>
+                        <Text placeholder="[champ pour l'Objet de votre demande]" label={''} value={''} style_={{}} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+                            throw new Error('Function not implemented.');
+                        } }></Text>
                     </div>  
                     <div className="flex flex-col mt-4">
                         <span className=' font-medium ml-3'>Message </span>
-                        <textarea className="p-2 border border-gray-400 rounded w-full" name="" id="" cols="30" rows="5"></textarea>
+                        <textarea className="p-2 border border-gray-400 rounded w-full" name="" id="" cols={30} rows={5}></textarea>
                     </div> 
                     <div className=' mt-4'>
                         <Button type='primary-b' > ENVOYER</Button>

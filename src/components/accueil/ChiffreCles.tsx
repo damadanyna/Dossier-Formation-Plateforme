@@ -1,4 +1,5 @@
 import React from 'react';
+
 const ChiffreCles:React.FC=()=>{
     const grid_data=[
         {
@@ -33,7 +34,7 @@ const ChiffreCles:React.FC=()=>{
         } 
     ];
     return (
-    <div className=" w-full flex-col items-center">
+    <div className=" w-full  h-full flex-col items-center">
         <div className=" font-extrabold flex flex-col mt-16 items-center">
             <span className=' text-white text-4xl'> Chiffre cles</span>
             <span className=' text-white relative text-7xl service_txt_ opacity-10'> Chiffre cles</span>
@@ -41,9 +42,9 @@ const ChiffreCles:React.FC=()=>{
         <div className="grid grid-cols-3">
             {grid_data.map((item,index)=>(
                 <div key={index} className="flex items-center my-6 mx-7 justify-center flex-col text-white"> 
-                    <div className=" w-44 bg-white  text-fuchsia-700 flex items-center justify-center  font-extrabold h-28 rounded-lg">  {item.label}</div>
+                    <div className=" w-44 bg-white text-2xl  text-fuchsia-700 flex items-center justify-center  font-extrabold h-28 rounded-lg">  {item.label}</div>
                     <div className=" w-24 box_shasdow_ h-2 -mt-2 bg-tranparent"></div>
-                    <span className=" text-sm font-extrabold mt-3 mb-3">{item.title}</span>
+                    <span className=" text-sm font-extrabold mt-7 mb-3">{item.title}</span>
                     <span className=" text-xs text-center">{item.sub_title}</span>
                 </div>
             ))

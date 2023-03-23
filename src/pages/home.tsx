@@ -3,6 +3,7 @@ import group_1 from '../assets/group1.svg';
 import group from '../assets/group.svg';
 
 import Boutton from '../components/btn/Boutton';
+import dot from '../assets/doted.svg';
 
 import TimelineSlide from '../components/timelineSlide';
 import ChiffreCles from '../components/accueil/ChiffreCles';
@@ -74,7 +75,8 @@ function Home() {
        </div>
        
        {/* chiffre cles */}
-        <div id="chiffreCle" className="flex bg-stone-800 h-screen mt-24 pb-10 " >
+        <div id="chiffreCle" className="flex bg-stone-900 h-screen mt-24 pb-10 " >
+            <img className=' z-50 w-full h-full absolute' src={dot} alt="" />
             <ChiffreCles ></ChiffreCles>
         </div> 
 

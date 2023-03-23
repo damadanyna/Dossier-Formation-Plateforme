@@ -3,11 +3,11 @@ import React from 'react';
 import valid_icon from '../assets/valid-icon.svg';
 import clear_icon from '../assets/clear-icon.svg';
 import Text from '../components/inputs/Text';
-import paypal_icon from '../assets/paypal.svg'
+import paypal_icon from '../assets/paypal.svg';
 import PaymentCardNameInput from '../components/inputs/PaymentCardNameInput';
 import Datexp from '../components/inputs/ExpirationInput';
 import { Link } from 'react-router-dom';
-import Button from '../components/btn/Boutton' 
+import Button from '../components/btn/Boutton'; 
 
 const FormaulairePayement: React.FC = () => {
 
@@ -56,7 +56,7 @@ const FormaulairePayement: React.FC = () => {
        <div className='flex w-full flex-row py-4 mb-11'> 
             {/* Pour le bloc premium */}
            <div className='flex w-1/4 flex-col items-center mx-5 '>
-                <div className=' premium-card border-2 shadow-lg border-gray-600 bg-white flex flex-col pt-10 rounded-lg bg-gradient-to-tr from-purple-200 via-transparent to-transparent' style={{width:`100%`,height:'100%',margin:'0px 20px'}}>
+                <div className=' premium-card border-2 shadow-lg border-gray-600 bg-white flex flex-col pt-10 rounded-lg bg-gradient-to-tr from-purple-200 via-transparent to-transparent' style={{width:'100%',height:'100%',margin:'0px 20px'}}>
                     {/* Forfait */}
                     <div className='flex flex-col text-center mb-5'>
                         <span className='font-bold'> Forfait </span>
@@ -89,35 +89,35 @@ const FormaulairePayement: React.FC = () => {
                                 <div className='flex mt-7 w-full flex-col'>
                                     <div className='flex w-full  flex-row'>
                                         <div className='flex w-full '>
-                                            <Text placeholder='[champ pour le nom]' required={true} label={'Nom'} value={''} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+                                            <Text placeholder='[champ pour le nom]' required={true} label={'Nom'} value={''} onChange={function (_event: React.ChangeEvent<HTMLInputElement>): void {
                                                 throw new Error('Function not implemented.');
                                             } } style_={{width:' 100%'}}></Text>
                                         </div>
                                         <div className='flex w-full ml-3'>
-                                            <Text placeholder='[champ pour le prénom]' required={true} label={'Prénom'} value={''} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+                                            <Text placeholder='[champ pour le prénom]' required={true} label={'Prénom'} value={''} onChange={function (_event: React.ChangeEvent<HTMLInputElement>): void {
                                                 throw new Error('Function not implemented.');
                                             } }  style_={{width:' 100%'}}></Text>
                                         </div>
                                     </div>     
                                     <div className=' mt-7'>
-                                        <Text placeholder='[champ pour l\adresse e\-mail]' required={true} label={'Email'} value={''} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+                                        <Text placeholder='[champ pour l\adresse e\-mail]' required={true} label={'Email'} value={''} onChange={function (_event: React.ChangeEvent<HTMLInputElement>): void {
                                             throw new Error('Function not implemented.');
                                         } }  style_={{flex:''}}></Text> 
                                     </div>
 
-                                    <div className="mt-7">
-                                        <Text placeholder={'[champ pour l\'adresse de facturation]'} required={true} label={'Adresse de facturation'} value={''} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+                                    <div className='mt-7'>
+                                        <Text placeholder={'[champ pour l\'adresse de facturation]'} required={true} label={'Adresse de facturation'} value={''} onChange={function (_event: React.ChangeEvent<HTMLInputElement>): void {
                                             throw new Error('Function not implemented.');
                                         } }  style_={{flex:''}}></Text> 
                                     </div> 
                                     <div className='flex w-full flex-row mt-7'>
                                         <div className='flex w-full'>
-                                            <Text placeholder='[champ pour la ville]' required={true} label={'Ville'} value={''} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+                                            <Text placeholder='[champ pour la ville]' required={true} label={'Ville'} value={''} onChange={function (_event: React.ChangeEvent<HTMLInputElement>): void {
                                                 throw new Error('Function not implemented.');
                                             } }  style_={{width:'100%'}}></Text> 
                                         </div>
                                         <div className='flex ml-3 w-full'>
-                                            <Text placeholder='[sélectionner le pays]' required={true} label={'Pays'} value={''} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+                                            <Text placeholder='[sélectionner le pays]' required={true} label={'Pays'} value={''} onChange={function (_event: React.ChangeEvent<HTMLInputElement>): void {
                                                 throw new Error('Function not implemented.');
                                             } }  style_={{width:'100%'}}></Text> 
                                         </div>
@@ -138,17 +138,17 @@ const FormaulairePayement: React.FC = () => {
 
                                     </div>     
                                     <div  className=' mt-4 flex-col flex'>
-                                        <Text placeholder='[champ pour le numéro de carte de crédit]' required={true} label={'Numéro de carte'} value={''} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+                                        <Text placeholder='[champ pour le numéro de carte de crédit]' required={true} label={'Numéro de carte'} value={''} onChange={function (_event: React.ChangeEvent<HTMLInputElement>): void {
                                             throw new Error('Function not implemented.');
                                         } }  style_={{width:'100%'}}></Text>   
                                     </div>
 
                                     <div className='flex w-full flex-row mt-7'>
-                                        <Text placeholder='[champ pour la ville]' required={true} label={'Ville'} value={''} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+                                        <Text placeholder='[champ pour la ville]' required={true} label={'Ville'} value={''} onChange={function (_event: React.ChangeEvent<HTMLInputElement>): void {
                                             throw new Error('Function not implemented.');
                                         } }  style_={{width:'100%'}}></Text> 
                                         <div className='flex ml-3'>
-                                            <Text placeholder='[sélectionner le pays]' required={true} label={'Pays'} value={''} onChange={function (event: React.ChangeEvent<HTMLInputElement>): void {
+                                            <Text placeholder='[sélectionner le pays]' required={true} label={'Pays'} value={''} onChange={function (_event: React.ChangeEvent<HTMLInputElement>): void {
                                                 throw new Error('Function not implemented.');
                                             } }  style_={{width:'100%'}}></Text> 
                                         </div>
