@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
-import Textarea from './components/inputs/TextArea';
+ 
+import PublicLayout from './layouts/main';
+import Home from './pages/home';
+import Contact from './pages/Contact';
+import FormaulairePaiement from './pages/formulairePayement';
+import Tarif from './pages/Tarif';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-function App() {
-  const [description, setDescription] = useState('');
-
-  const handleDescriptionChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setDescription(e.target.value);
-  };
-
+function App() { 
   return (
-    <div className="App">
-      <Textarea
-        label="Description"
-        value={description}
-        onChange={handleDescriptionChange}
-        placeholder="Entrez une description de votre application"
-        required={true}
-        rows={8}
-      />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<PublicLayout />}>
+          <Route index element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/formulairePaiement' element={<FormaulairePaiement />} />
+          <Route path='/tarif' element={<Tarif />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

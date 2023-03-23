@@ -14,7 +14,7 @@ function TimelineSlide(props: { elts: Array<EltSlide>; eltShow?:number  }){
     const slide_elt = props.elts;
     // let nbEltShow = (props.eltShow)?props.eltShow:(props.elts.length > 4 ? 4:3);
 
-    const [nbShow,setNbShow] = useState((props.eltShow)?props.eltShow:(props.elts.length > 4 ? 4:3));
+    const [nbShow] = useState((props.eltShow)?props.eltShow:(props.elts.length > 4 ? 4:3));
 
     
 
@@ -28,7 +28,7 @@ function TimelineSlide(props: { elts: Array<EltSlide>; eltShow?:number  }){
                 <div className='flex duration-300' style={{transform:`translateX(${index_translate * taille_elt_slide}px)`}}>
                     {slide_elt.map((elt) => <div key={elt.title} className=' rounded flex flex-col' style={{width:`${taille_elt_slide}px`,height:`${taille_elt_slide + 50}px`}} >
 
-                        <div style={{height:'150px'}} className="relative flex justify-center items-center">
+                        <div style={{height:'150px'}} className='relative flex justify-center items-center'>
 
                             <div style={{height:'100px'}} className='w-px absolute top-5 border-dashed border border-1 border-gray-600'></div>
 

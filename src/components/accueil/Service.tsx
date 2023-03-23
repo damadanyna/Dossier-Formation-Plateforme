@@ -25,8 +25,7 @@ const Service:FC=()=>{
                     Nous proposons une large gamme de formations pour répondre aux besoins spécifiques de nos clients. Que vous soyez une entreprise ou un particulier, nous avons des formations adaptées à votre profil et à vos objectifs. Nous proposons des formations en ligne, en présentiel ou en blended learning, ainsi que des formations sur mesure pour répondre à vos besoins spécifiques. Nos formateurs expérimentés vous accompagnent tout au long de votre parcours pour vous aider à atteindre vos objectifs.
                 </span>
                 </div>
-                <div className="flex bg-stone-800 mt-24 pb-10 " >
-                    {/* <Chiffre_cles ></Chiffre_cles> */}
+                <div className="flex bg-stone-800 mt-24 pb-10 " > 
                 </div> 
             </div>
  

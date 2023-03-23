@@ -3,12 +3,11 @@ import group_1 from '../assets/group1.svg';
 import group from '../assets/group.svg';
 
 import Boutton from '../components/btn/Boutton';
+import dot from '../assets/doted.svg';
 
 import TimelineSlide from '../components/timelineSlide';
 import ChiffreCles from '../components/accueil/ChiffreCles';
-import Tarif from '../components/accueil/Tarif';
-
-
+import Temoignage from '../components/accueil/Temoignage'
 
 
 
@@ -21,7 +20,7 @@ function Home() {
     }
 
     return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col pt-20'>
         
         {/* Elt de bienvenue */}
         <div className='flex flex-col items-center justify-center'>
@@ -33,14 +32,15 @@ function Home() {
             </div>
 
             {/* Texte de bievenue */}
-            <div className='text-center w-3/5 text-gray-600 text-lg mt-5'>
+            <div className='text-center w-3/5 text-gray-600 text-md mt-12'>
                 <p>
                     Bienvenue sur notre plateforme de formation en ligne ! Nous sommes une entreprise spécialisée dans la formation professionnelle pour les entreprises et les particuliers. Nous sommes convaincus que la formation est un élément clé pour le développement personnel et professionnel de chacun. C'est pourquoi nous mettons notre expertise à votre disposition pour vous aider à atteindre vos objectifs.
                 </p>
             </div>
 
             {/* Les deux boutons */}
-            <div className='mt-5 flex justify-center items-center'>
+            <div className='flex justify-center items-center mt-12'>
+
                 <Boutton> COMMENCER </Boutton>
                 {/* <button className=' p-2 px-5 border rounded-lg'> A PROPOS </button>  */}
                 <Boutton type='secondary' className='ml-2'>  APROPOS </Boutton>
@@ -52,37 +52,40 @@ function Home() {
         {/* Composants slider */}
         <TimelineSlide elts={slide_elt} />
          
-        {/* Greel ico */}
-        <div className=' w-full items-center flex justify-center  mt-10'>
-            <img className=' relative -mr-14 mt-12' src={group} alt="" />
-            <img className=' relative' src={group_1} alt="" />
-        </div>
-
          {/* Service */}
-        <div className=" font-extrabold flex flex-col mt-16 items-center">
-                <span className=' text-3xl'> Services</span>
-                <span className=' relative text-7xl service_txt_ opacity-10'> Services</span>
-         </div>
-        
-        
-         {/* Texte de bievenue */}
-         <div className="flex justify-center">
-            <div className='text-center w-3/5 text-gray-600 text-lg mt-5'>
-                <p>
-                Nous proposons une large gamme de formations pour répondre aux besoins spécifiques de nos clients. Que vous soyez une entreprise ou un particulier, nous avons des formations adaptées à votre profil et à vos objectifs. Nous proposons des formations en ligne, en présentiel ou en blended learning, ainsi que des formations sur mesure pour répondre à vos besoins spécifiques. Nos formateurs expérimentés vous accompagnent tout au long de votre parcours pour vous aider à atteindre vos objectifs.
-                </p>
+       <div id="service" className="flex flex-col mt-8 "> 
+            <div className=' w-full items-center flex justify-center  mt-6'>
+                <img className=' relative -mr-14 mt-12' src={group} alt="" />
+                <img className=' relative' src={group_1} alt="" />
             </div>
-         </div>
 
-         {/* chiffre cles */}
-        <div className="flex bg-stone-800 mt-24 pb-10 " >
+            <div className=" font-extrabold flex flex-col mt-16 items-center">
+                    <span className=' text-3xl'> Services</span>
+                    <span className=' relative text-7xl service_txt_ opacity-10'> Services</span>
+            </div>
+             
+            <div className="flex justify-center">
+                <div className='text-center w-3/5 text-gray-600 text-sm mt-5'>
+                    <p>
+                    Nous proposons une large gamme de formations pour répondre aux besoins spécifiques de nos clients. Que vous soyez une entreprise ou un particulier, nous avons des formations adaptées à votre profil et à vos objectifs. Nous proposons des formations en ligne, en présentiel ou en blended learning, ainsi que des formations sur mesure pour répondre à vos besoins spécifiques. Nos formateurs expérimentés vous accompagnent tout au long de votre parcours pour vous aider à atteindre vos objectifs.
+                    </p>
+                </div>
+            </div>
+       </div>
+       
+       {/* chiffre cles */}
+        <div id="chiffreCle" className="flex bg-stone-900    mt-24 pb-10 " >
+            <img className=' z-20 w-full h-full absolute' src={dot} alt="" />
             <ChiffreCles ></ChiffreCles>
         </div> 
 
+       {/* chiffre cles */}
+        <div id="chiffreCle" className="flex    mt-24 pb-10 " > 
+            <Temoignage ></Temoignage>
+        </div> 
 
-        {/* Tarifs */}
-        <Tarif />
 
+        
     </div>
     );
   }

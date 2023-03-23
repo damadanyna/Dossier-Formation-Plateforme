@@ -3,14 +3,16 @@ import React from 'react';
 interface TextProps {
   label: string;
   value: string;
+  style_: object;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   required?: boolean;
 }
 
-const Text: React.FC<TextProps> = ({ label, value, onChange, placeholder, required }) => {
+const Text: React.FC<TextProps> = ({ label, value,style_, onChange, placeholder, required }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" 
+    style={style_}>
       <label className="mb-1">{label}</label>
       <input 
         type="text" 
